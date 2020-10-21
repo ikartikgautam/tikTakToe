@@ -16,15 +16,19 @@ def printPlayBoard():
 def getInput(sym):
     inp = input("Enter the matric position : ")
     assignInput(inp[0],inp[1],sym)
+    printPlayBoard()
 
 def assignInput(row,col,sym):
     arr[row][col]=sym
 
 
 def driver():
-    
+    for e in range(0,9):
+        if(e%2==0):
+            getInput('x')
+        else:
+            getInput('0')
 
-getInput('x')
-printPlayBoard()
+driver()
 
 
